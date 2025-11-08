@@ -11,7 +11,7 @@ function createGrid(size){
     container.appendChild(row);
   
 
-  for(let i=0;i<size;i++){  
+  for(let j=0;j<size;j++){  
       let cell = document.createElement("div");
       cell.className = "cell";
       row.appendChild(cell);
@@ -20,4 +20,3 @@ function createGrid(size){
   }
 
 createGrid(16);
-body.appendChild(container);
