@@ -1,7 +1,7 @@
 const container = document.getElementById('container');
 container.textContent = "Etch-A-Sketch";
 
-
+// creating the 16x16 grid
 function createGrid(size){
   
   
