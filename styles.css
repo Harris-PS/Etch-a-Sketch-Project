@@ -19,7 +19,8 @@
   border: 1px solid black;
 }
 
-.gridsizebtn {
+.gridsizebtn,
+.resetbtn {
   margin: 15px;
   width: 200px;
   font-family: 'Courier New', Courier, monospace;
