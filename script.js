@@ -3,13 +3,20 @@ function createGrid(size){
   container.textContent = "Etch-A-Sketch";
 
   const gridsizebtn = document.createElement('button');
+  gridsizebtn.className = "gridsizebtn";
   gridsizebtn.textContent = "Change Grid Size";
   container.appendChild(gridsizebtn);
 
+  // Function to create grid size
   function gridsize(){
     let gridsize = prompt("Enter grid size between 3 to 100");
 
     gridsize = parseInt(gridsize);
+
+    if(gridsize < 3 || gridsize > 100){
+      alert("Please enter a number between 3 to 100");
+      return;
+    } 
 
     container.textContent = "";
 
@@ -17,6 +24,18 @@ function createGrid(size){
   }
 
   gridsizebtn.addEventListener('click', gridsize);
+
+  const resetbtn = document.createElement('button');
+  resetbtn.className = "resetbtn";
+  resetbtn.textContent = "Reset Grid";
+
+  function reset(){
+    container.textContent = "";
+    createGrid(size);
+  }
+
+  resetbtn.addEventListener('click', reset);
+  container.appendChild(resetbtn);
 
 
   for(let i=0;i<size;i++){
