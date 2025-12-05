@@ -3,7 +3,6 @@ container.textContent = "Etch-A-Sketch";
 
 function createGrid(size){
   
-  
   for(let i=0;i<size;i++){
     let row = document.createElement('div');
     row.className = "row";
@@ -15,11 +14,11 @@ function createGrid(size){
       cell.className = "cell";
       row.appendChild(cell);
       cell.addEventListener('mouseover', () => {
-        cell.style.backgroundColor = 'yellow';
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        cell.style.backgroundColor = `rgba(${r},${g},${b})`;
       }); 
-      cell.addEventListener('mouseout', () => {
-      cell.style.backgroundColor = '';
-    });
     }
   }
 }
