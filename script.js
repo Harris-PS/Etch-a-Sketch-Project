@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
 container.textContent = "Etch-A-Sketch";
 
+
 function createGrid(size){
   
   for(let i=0;i<size;i++){
